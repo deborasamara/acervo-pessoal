@@ -7,6 +7,7 @@ class Livro(models.Model):
     autor = models.CharField(max_length=255)
     ano  = models.IntegerField()
     foto = models.ImageField(upload_to='capas/')
+
     def __str__(self):
         return "Nome: " + self.nome + " Autor: " + self.autor + " Ano: " + self.ano
 
@@ -24,5 +25,11 @@ class Emprestimo(models.Model):
     usuario_portador = models.ForeignKey(User, on_delete=models.CASCADE)
     status_emprestimo = models.CharField(max_length=10, choices= [ ('ativo', 'Ativo'),
         ('devolvido', 'Devolvido')], default='ativo')
+    
     def __str__(self):
         return "Livro "+ self.livro + " emprestado para "+ self.contato + " em " + self.data_emprestimo + " status: "+ self.status_emprestimo
+    
+    def registrar_devolucao():
+        self.status_emprestimo = 'devolvido'
+        self.data_devolucao = timezone.now()
+        self.save() # salva mesmo no banco de dados
