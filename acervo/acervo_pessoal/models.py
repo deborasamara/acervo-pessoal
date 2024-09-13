@@ -12,8 +12,9 @@ class Livro(models.Model):
         return "Nome: " + self.nome + " Autor: " + self.autor + " Ano: " + self.ano
 
 class Contato(models.Model):
-    nome =  models.CharField(255)
+    nome =  models.CharField(max_length=255)
     email = models.EmailField()
+    senha = models.CharField(max_length=255)
     def __str__(self):
         return "Nome: " + self.nome + " Email: " + self.email
 
