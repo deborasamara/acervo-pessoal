@@ -3,6 +3,6 @@ from . import views
 
 app_name = 'acervo_pessoal'
 urlpatterns = [
-    path('', views.index, name = 'index'),
-    
+    path('', views.HomePageView.as_view(), name='home'),
+    path('home_logado', views.homePageLogadoView.as_view(), name='home_logado'), 
 ]

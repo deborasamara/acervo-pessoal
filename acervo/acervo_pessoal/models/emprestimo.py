@@ -17,3 +17,5 @@ class Emprestimo(models.Model):
         self.status_emprestimo = 'devolvido'
         self.data_devolucao = timezone.now()
         self.save() # salva mesmo no banco de dados
+
+    class Meta:

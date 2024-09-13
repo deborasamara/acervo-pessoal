@@ -10,3 +10,5 @@ class Livro(models.Model):
     def __str__(self):
         return "Nome: " + self.nome + " Autor: " + self.autor + " Ano: " + self.ano
 
+    class Meta:
+
