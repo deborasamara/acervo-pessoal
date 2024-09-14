@@ -4,16 +4,18 @@
 <head>
     {% block head %}
     {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base_nao_logado.css'%}">
     <title>{% block titulo %}Homepage{% endblock %}</title>
 </head>
 <body>
     {% block navbar %}
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right"><a class="active" href="#about">About</a></li>
-      </ul>
+    <nav>
+        <ul>
+            <li class=""><img src="{% static 'images/logo.svg' %}" class="logo"></li>
+            <li><a href="#home">Acervo Digital Samara</a></li>
+            <li style="float:right"><a  href="#"><img src="{% static 'images/profile.svg' %}" class=""></a></li>
+        </ul>
+    </nav>
     {% endblock %}
     <h1>teste de nao logado </h1>
 
