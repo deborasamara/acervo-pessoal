@@ -4,18 +4,31 @@
 <head>
     {% block head %}
     {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/base_logado.css'%}">
     <title>{% block titulo %}Homepage{% endblock %}</title>
 </head>
 <body>
     {% block navbar %}
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right"><a class="active" href="#about">About</a></li>
-      </ul>
+    <nav>
+        <ul>
+            <li  class="logo"><img src="{% static 'images/logo.svg' %}"></li>
+            <li  class="logo-texto"><a href="#home">Acervo Digital Samara</a></li>
+            <li  class="img-profile" style="float:right">
+                <a  href="#">
+                    <img src="{% static 'images/profile.svg' %}">
+                    <div class="login-texto">Meu perfil</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="nav-2-opcoes-escolha">
+        <div class="cadastrar-livro-op"><a href="">Cadastrar livro</a></div>
+        <div class="registrar-livro-op"><a href="">Registrar livro</a></div>
+        <div class="cadastrar-contato-op"><a href="">Cadastrar contato</a></div>
+        <div class="registrar-devolucao-op"><a href="">Registrar devolução</a></div>
+        <div class="listar-itens-op"><a href="">Listar itens</a></div>
+    </div>
     {% endblock %}
-
     {% block conteudo %}
     {% endblock %}
 </body>

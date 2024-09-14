@@ -11,14 +11,17 @@
     {% block navbar %}
     <nav>
         <ul>
-            <li class=""><img src="{% static 'images/logo.svg' %}" class="logo"></li>
-            <li><a href="#home">Acervo Digital Samara</a></li>
-            <li style="float:right"><a  href="#"><img src="{% static 'images/profile.svg' %}" class=""></a></li>
+            <li  class="logo"><img src="{% static 'images/logo.svg' %}"></li>
+            <li  class="logo-texto"><a href="#home">Acervo Digital Samara</a></li>
+            <li  class="img-profile" style="float:right">
+                <a  href="{% url 'acervo_pessoal:login'%}">
+                    <img src="{% static 'images/profile.svg' %}">
+                    <div class="login-texto">Login</div>
+                </a>
+            </li>
         </ul>
     </nav>
     {% endblock %}
-    <h1>teste de nao logado </h1>
-
     {% block conteudo %}
     {% endblock %}
 </body>
