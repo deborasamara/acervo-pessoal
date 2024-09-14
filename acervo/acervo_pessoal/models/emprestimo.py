@@ -1,4 +1,7 @@
-from django.db import models
+from django.db import models 
+from acervo_pessoal.models.livro import Livro
+from acervo_pessoal.models.contato import Contato
+from acervo_pessoal.models.livro import Livro
 from django.contrib.auth.models import User
 
 class Emprestimo(models.Model):
@@ -13,9 +16,7 @@ class Emprestimo(models.Model):
     def __str__(self):
         return "Livro "+ self.livro + " emprestado para "+ self.contato + " em " + self.data_emprestimo + " status: "+ self.status_emprestimo
     
-     def registrar_devolucao():
+    def registrar_devolucao():
         self.status_emprestimo = 'devolvido'
         self.data_devolucao = timezone.now()
         self.save() # salva mesmo no banco de dados
-
-    class Meta:

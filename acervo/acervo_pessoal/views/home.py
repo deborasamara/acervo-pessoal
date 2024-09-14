@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class HomeView(View):
       def get(self, request, *args, **kwargs):
-        return redirect('pag_inicial_logado') if request.user.is_authenticated else render(request, 'acervo_pessoal/home.html')
+        return redirect('pag_inicial_logado') if request.user.is_authenticated else render(request, 'home.html')
 
 class HomePageLogadoView(View):
       def get(self, request, *args, **kwargs):

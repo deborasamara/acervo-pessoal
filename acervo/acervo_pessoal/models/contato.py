@@ -8,4 +8,3 @@ class Contato(models.Model):
     def __str__(self):
         return "Nome: " + self.nome + " Email: " + self.email
     
-    class Meta:

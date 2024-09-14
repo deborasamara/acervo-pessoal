@@ -2,6 +2,7 @@ from django.urls import path
 from .views.gerenciarEmprestimo import *
 from .views.gerenciarContato import *
 from .views.gerenciarLivro import *
+from .views.home import *
 
 app_name = 'acervo_pessoal'
 urlpatterns = [

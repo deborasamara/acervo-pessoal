@@ -6,7 +6,7 @@ from ..models.livro import *
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 
-class GerenciarLivro(view):
+class GerenciarLivro(View):
     def get(self, request, *args, **kwargs):
         ... 
 
