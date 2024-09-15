@@ -14,4 +14,7 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='login'),
     path('meu_perfil/', MeuPerfilView.as_view(), name='perfil'), 
     path('logout/', LogoutView.as_view(), name='logout'),
+    path('cadastrar_livro/', CadastrarLivroView.as_view(), name='cadastrar_livro'),
+    path('cadastrar_contato/', CadastrarContatoView.as_view(), name='cadastrar_contato'),
+
 ]

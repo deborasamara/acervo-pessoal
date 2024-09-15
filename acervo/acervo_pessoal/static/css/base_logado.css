@@ -3,7 +3,7 @@ body{
   background-color: #FFFFFF;
 }
 
-ul{
+.nav-bg-logado{
     list-style-type: none;
     margin: 0;
     padding: 0.5rem 1rem;
@@ -11,10 +11,10 @@ ul{
     background-color: #400101;
     text-align: center; 
 }
-li{
+.li-nav-logado{
     float: left;
 }
-ul li{
+.nav-bg-logado li{
     margin-top: 0.2rem;
 }
 
@@ -40,7 +40,7 @@ ul li{
     line-height: 0.2;
 }
   
-li a {
+.li-nav-logado a {
     display: block;
     font-size: 1rem;
     color: white;
@@ -52,6 +52,7 @@ li a {
     display: flex !important;
     margin: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 2 !important;
 }
 .nav-2-opcoes-escolha div{
     display: flex !important;

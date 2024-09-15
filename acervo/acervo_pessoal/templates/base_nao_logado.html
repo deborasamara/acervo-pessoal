@@ -12,7 +12,7 @@
     <nav>
         <ul>
             <li  class="logo"><img src="{% static 'images/logo.svg' %}"></li>
-            <li  class="logo-texto"><a href="#home">Acervo Digital Samara</a></li>
+            <li  class="logo-texto"><a href="{% url 'acervo_pessoal:home'%}">Acervo Pessoal Samara</a></li>
             <li  class="img-profile" style="float:right">
                 <a  href="{% url 'acervo_pessoal:login'%}">
                     <img src="{% static 'images/profile.svg' %}">

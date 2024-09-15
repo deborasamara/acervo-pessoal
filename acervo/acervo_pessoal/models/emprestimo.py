@@ -1,8 +1,8 @@
 from django.db import models 
 from acervo_pessoal.models.livro import Livro
 from acervo_pessoal.models.contato import Contato
-from acervo_pessoal.models.livro import Livro
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 class Emprestimo(models.Model):
     livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
@@ -14,9 +14,10 @@ class Emprestimo(models.Model):
         ('devolvido', 'Devolvido')], default='ativo')
     
     def __str__(self):
-        return "Livro "+ self.livro + " emprestado para "+ self.contato + " em " + self.data_emprestimo + " status: "+ self.status_emprestimo
+        return "Livro "+ str(self.livro) + " emprestado para "+ str(self.contato) + " em " + str(self.data_emprestimo) + " status: "+ str(self.status_emprestimo)
     
-    def registrar_devolucao():
+""" def registrar_devolucao(self):
         self.status_emprestimo = 'devolvido'
         self.data_devolucao = timezone.now()
         self.save() # salva mesmo no banco de dados
+"""
