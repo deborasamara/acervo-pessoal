@@ -14,7 +14,7 @@
             <li  class="logo"><img src="{% static 'images/logo.svg' %}"></li>
             <li  class="logo-texto"><a href="#home">Acervo Digital Samara</a></li>
             <li  class="img-profile" style="float:right">
-                <a  href="#">
+                <a  href="{% url 'acervo_pessoal:perfil' %}">
                     <img src="{% static 'images/profile.svg' %}">
                     <div class="login-texto">Meu perfil</div>
                 </a>
@@ -23,7 +23,7 @@
     </nav>
     <div class="nav-2-opcoes-escolha">
         <div class="cadastrar-livro-op"><a href="">Cadastrar livro</a></div>
-        <div class="registrar-livro-op"><a href="">Registrar livro</a></div>
+        <div class="registrar-livro-op"><a href="">Registrar empréstimo</a></div>
         <div class="cadastrar-contato-op"><a href="">Cadastrar contato</a></div>
         <div class="registrar-devolucao-op"><a href="">Registrar devolução</a></div>
         <div class="listar-itens-op"><a href="">Listar itens</a></div>

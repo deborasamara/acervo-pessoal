@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -11,7 +11,8 @@ class HomeView(View):
 
 class HomePageLogadoView(View):
       def get(self, request, *args, **kwargs):
-        return render(request, 'pag_inicial_logado.html')
+        user = request.user
+        return render(request, 'pag_inicial_logado.html', {'user': user})
 
 
 

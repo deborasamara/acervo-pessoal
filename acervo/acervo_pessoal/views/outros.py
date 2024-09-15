@@ -6,7 +6,7 @@ from ..models.emprestimo import *
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.hashers import make_password
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, logout
 
 
 class CadastroView(View):
@@ -50,4 +50,13 @@ class LoginView(View):
         
         else:
             return render(request, 'login.html', {'error': 'Houve um erro no seu login, tente novamente. Talvez sua senha esteja errada'})
-    
+
+class MeuPerfilView(View):
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        return render(request, 'meu_perfil.html', {'user':user})
+
+class LogoutView(View):
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return redirect('acervo_pessoal:home')
