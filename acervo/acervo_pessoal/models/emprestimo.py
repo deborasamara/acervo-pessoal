@@ -7,9 +7,9 @@ from django.utils import timezone
 class Emprestimo(models.Model):
     livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
     contato = models.ForeignKey(Contato, on_delete=models.CASCADE)
-    data_emprestimo = models.DateTimeField()
+    data_emprestimo = models.DateTimeField(default=timezone.now)
     data_devolucao = models.DateTimeField(blank=True, null=True)
-    usuario_portador = models.ForeignKey(User, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     status_emprestimo = models.CharField(max_length=10, choices= [ ('ativo', 'Ativo'),
         ('devolvido', 'Devolvido')], default='ativo')
     

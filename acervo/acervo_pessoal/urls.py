@@ -16,5 +16,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('cadastrar_livro/', CadastrarLivroView.as_view(), name='cadastrar_livro'),
     path('cadastrar_contato/', CadastrarContatoView.as_view(), name='cadastrar_contato'),
-
+    path('registrar_emprestimo/', RegistrarEmprestimoView.as_view(), name='registrar_emprestimo'),
 ]
