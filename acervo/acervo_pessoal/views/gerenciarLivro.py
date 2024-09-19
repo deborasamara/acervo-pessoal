@@ -20,3 +20,8 @@ class CadastrarLivroView(View):
          livro.save()
          return redirect(request.META.get('HTTP_REFERER'))
     
+class PesquisarLivroView(View):
+     def get(self, request, *args, **kwargs):
+          pesquisa = request.GET.get('p', '') # se o usuário não digitar a variável 'p', ele vai só dar enter sem nada, por isso precisa de dois argumentos
+          livros_do_acervo = Livro.objects.filter(usuario=request.user, nome__icontains=pesquisa)
+          return render(request, 'livros_pesquisados.html', {'livros': livros_do_acervo})

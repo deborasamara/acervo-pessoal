@@ -93,3 +93,14 @@ body{
 .listar-itens-op a:visited, .listar-itens-op a{
     color: #4F1C1C;
 }
+.form-pesquisa{
+    margin-top: 0.7rem;
+}
+.pesquisa-input{
+    border-radius: 5px;
+    margin: 0;
+}
+.pesquisa-botao{
+    border-radius: 5px;
+    margin: 0;
+}

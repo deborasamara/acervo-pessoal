@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{% static 'css/meu_perfil.css'%}">
     {% endblock %}
     {% block conteudo %}
-    <div>
+    <div class="conteudo-pagina-perfil">
         <div>
             <h1>Meu perfil</h1>
             <p>{{user.nome}}</p>
@@ -12,7 +12,7 @@
             <p>{{user.email}}</p>
         </div>
         <div>
-            <form action="{% url 'acervo_pessoal:logout' %}" method="post">
+            <form action="{% url 'acervo_pessoal:logout' %}" method="post" class="botao-sair">
                 {% csrf_token %}
                 <button type="submit">
                     <img src="{% static 'images/logout-img.svg' %}" alt="">

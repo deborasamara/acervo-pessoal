@@ -19,4 +19,5 @@ urlpatterns = [
     path('registrar_emprestimo/', RegistrarEmprestimoView.as_view(), name='registrar_emprestimo'),
     path('registrar_devolucao/', RegistrarDevolucaoView.as_view(), name='registrar_devolucao'),
     path('listar_itens/', ListarItensView.as_view(), name='listar_itens'),
+    path('pesquisar_livros/', PesquisarLivroView.as_view(), name='pesquisar_livros'),
 ]
