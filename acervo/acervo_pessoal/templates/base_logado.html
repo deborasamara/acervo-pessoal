@@ -25,8 +25,8 @@
         <div class="cadastrar-livro-op"><a href="{% url 'acervo_pessoal:cadastrar_livro'%}">Cadastrar livro</a></div>
         <div class="registrar-livro-op"><a href="{% url 'acervo_pessoal:registrar_emprestimo'%}">Registrar empréstimo</a></div>
         <div class="cadastrar-contato-op"><a href="{% url 'acervo_pessoal:cadastrar_contato'%}">Cadastrar contato</a></div>
-        <div class="registrar-devolucao-op"><a href="">Registrar devolução</a></div>
-        <div class="listar-itens-op"><a href="">Listar itens</a></div>
+        <div class="registrar-devolucao-op"><a href="{% url 'acervo_pessoal:registrar_devolucao'%}">Registrar devolução</a></div>
+        <div class="listar-itens-op"><a href="{% url 'acervo_pessoal:listar_itens'%}">Listar itens</a></div>
     </div>
     {% endblock %}
     {% block conteudo %}
